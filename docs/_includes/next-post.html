@@ -1,0 +1,158 @@
+{% if page.next.url %}
+<div class="post">
+
+  {% assign image_files = site.static_files | where: "image", true %}
+    {% for myimage in image_files %}
+      {% if myimage.basename == page.next.permalink %}
+        <div class="image-cover-wrapper">
+            <img class="image-cover" src="/assets/posts_images/{{ page.next.permalink }}.jpg" srcset="/assets/posts_images/{{ page.next.permalink }}@2x.jpg" alt="">
+            <img class="image-cover-background" src="/assets/posts_images/{{ page.next.permalink }}@2x.jpg" srcset="/assets/posts_images/{{ page.next.permalink }}@2x.jpg" alt="">
+        </div>
+      {% else %}
+      {% endif %}
+  {% endfor %}
+
+  <article class="container" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="row">
+      <div class="col">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="post-header">
+          <h1 class="post-title" itemprop="name headline">{{ page.next.title | escape }}</h1>
+          <time datetime="{{ page.next.date | date_to_xmlschema }}" itemprop="datePublished" class="post-date">
+            {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+            {{ page.next.date | date: date_format }}
+          </time>
+        </div>
+      </div>
+    </div>
+
+    <div class="row post-content" itemprop="articleBody">
+      <div class="col">
+        {{ page.next.content | markdownify }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        {% if site.disqus.shortname %}
+        {% include disqus_comments.html %}
+        {% endif %}
+      </div>
+    </div>
+
+  </article>
+
+  <hr>
+
+</div>
+{% endif %}
+
+
+{% if page.next.next.url %}
+<div class="post">
+
+  {% assign image_files = site.static_files | where: "image", true %}
+    {% for myimage in image_files %}
+      {% if myimage.basename == page.next.next.permalink %}
+        <div class="image-cover-wrapper">
+            <img class="image-cover" src="/assets/posts_images/{{ page.next.next.permalink }}.jpg" srcset="/assets/posts_images/{{ page.next.next.permalink }}@2x.jpg" alt="">
+            <img class="image-cover-background" src="/assets/posts_images/{{ page.next.next.permalink }}@2x.jpg" srcset="/assets/posts_images/{{ page.next.next.permalink }}@2x.jpg" alt="">
+        </div>
+      {% else %}
+      {% endif %}
+  {% endfor %}
+
+  <article class="container" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="row">
+      <div class="col">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="post-header">
+          <h1 class="post-title" itemprop="name headline">{{ page.next.next.title | escape }}</h1>
+          <time datetime="{{ page.next.next.date | date_to_xmlschema }}" itemprop="datePublished" class="post-date">
+            {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+            {{ page.next.next.date | date: date_format }}
+          </time>
+        </div>
+      </div>
+    </div>
+
+    <div class="row post-content" itemprop="articleBody">
+      <div class="col">
+        {{ page.next.next.content | markdownify }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        {% if site.disqus.shortname %}
+        {% include disqus_comments.html %}
+        {% endif %}
+      </div>
+    </div>
+
+  </article>
+
+  <hr>
+
+</div>
+{% endif %}
+
+
+{% if page.next.next.next.url %}
+<div class="post">
+
+  {% assign image_files = site.static_files | where: "image", true %}
+    {% for myimage in image_files %}
+      {% if myimage.basename == page.next.next.next.permalink %}
+        <div class="image-cover-wrapper">
+            <img class="image-cover" src="/assets/posts_images/{{ page.next.next.next.permalink }}.jpg" srcset="/assets/posts_images/{{ page.next.next.next.permalink }}@2x.jpg" alt="">
+            <img class="image-cover-background" src="/assets/posts_images/{{ page.next.next.next.permalink }}@2x.jpg" srcset="/assets/posts_images/{{ page.next.next.next.permalink }}@2x.jpg" alt="">
+        </div>
+      {% else %}
+      {% endif %}
+  {% endfor %}
+
+  <article class="container" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="row">
+      <div class="col">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="post-header">
+          <h1 class="post-title" itemprop="name headline">{{ page.next.next.next.title | escape }}</h1>
+          <time datetime="{{ page.next.next.next.date | date_to_xmlschema }}" itemprop="datePublished" class="post-date">
+            {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+            {{ page.next.next.next.date | date: date_format }}
+          </time>
+        </div>
+      </div>
+    </div>
+
+    <div class="row post-content" itemprop="articleBody">
+      <div class="col">
+        {{ page.next.next.next.content | markdownify }}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        {% if site.disqus.shortname %}
+        {% include disqus_comments.html %}
+        {% endif %}
+      </div>
+    </div>
+
+  </article>
+
+</div>
+{% endif %}
+  
+
+{% include author.html %}

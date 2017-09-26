@@ -1,0 +1,152 @@
+---
+layout: default
+---
+<div class="home">
+  {% include author.html %}
+
+  <div class="container">
+  <!--   <div class="row">
+      <div class="col">
+        1 of 2
+      </div>
+      <div class="col">
+        1 of 2
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        1 of 3
+      </div>
+      <div class="col">
+        1 of 3
+      </div>
+      <div class="col">
+        1 of 3
+      </div>
+    </div> -->
+
+  <!--   <div class="row">
+      <div class="col">
+        <p>Hi</p>
+        <p>hi2</p>
+        {{ site.my_var }}
+
+        <ul>
+          {% for member in site.data.members %}
+          <li>
+            <a href="https://github.com/{{ member.github }}">
+              {{ member.name }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+
+        <ul>
+          {% for org_hash in site.data.orgs %}
+          {% assign org = org_hash[1] %}
+          <li>
+            <a href="https://github.com/{{ org.username }}">
+              {{ org.name }}
+            </a>
+            ({{ org.members | size }} members)
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div> -->
+
+    <!-- Content -->
+<!--     <div class="row content">
+      <div class="col">
+        {{ content }}
+      </div>
+    </div> -->
+  <!-- 
+    <ul class="post-list">
+      {% for post in site.posts %}
+        <li>
+          {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+          <span class="post-meta">{{ post.date | date: date_format }}</span>
+
+          <h2>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h2>
+        </li>
+      {% endfor %}
+    </ul> -->
+
+  <!--   <ul class="post-list">
+      {% for post in paginator.posts %}
+        <li>
+          {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+          <span class="post-meta">{{ post.date | date: date_format }}</span>
+
+          <h2>
+            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </h2>
+          <div class="content">
+            {{ post.content }}
+          </div>
+        </li>
+      {% endfor %}
+    </ul> -->
+
+    {% include rss.html %}
+
+    <!-- This loops through the paginated posts -->
+    <div class="row">
+      <div class="col">
+        <div class="posts">
+          {% for post in paginator.posts %}
+          <article class="post-item">
+            <a href="{{ post.url | relative_url }}" class="post-item-link">
+              {% assign image_files = site.static_files | where: "image", true %}
+                {% for myimage in image_files %}
+                  {% if myimage.basename == post.permalink %}
+                    <img class="post-item-image" src="/assets/posts_images/{{ post.permalink }}.jpg" srcset="/assets/posts_images/{{ post.permalink }}@2x.jpg" alt="">
+                  {% else %}
+                  {% endif %}
+              {% endfor %}
+              <p class="post-item-date">
+                {% assign date_format = "%b %-d, %Y" %}
+                {{ post.date | date: "%b %-d, %Y" }}
+              </p>
+              <h2 class="post-item-title">
+                {{ post.title | escape }}
+              </h2>
+              <div class="post-item-excerpt">
+                {{ post.excerpt }}
+                <!-- {{ post.content }} -->
+              </div>
+            </a>
+          </article>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Pagination links -->
+    <div class="row">
+      <div class="col">
+        <div class="pagination">
+          {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path }}" class="btn pagination-previous">Previous</a>
+          {% else %}
+          <!-- <span class="btn btn-disabled pagination-previous-disabled">Previous</span> -->
+          {% endif %}
+
+          <div class="pagination-page-number">{{ paginator.page }} of {{ paginator.total_pages }}</div>
+
+          {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path }}" class="btn pagination-next">Next</a>
+          {% else %}
+          <!-- <span class="btn btn-disabled pagination-next-disabled">Next</span> -->
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+ 
+  {% include footer.html %}

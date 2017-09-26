@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+:root {
+  --font-size: 16px;
+  --font-size-xxxlarge: calc(var(--font-size) * 1.7);
+  --font-size-xxlarge: calc(var(--font-size) * 1.4);
+  --font-size-xlarge: calc(var(--font-size) * 1.25);
+  --font-size-large: calc(var(--font-size) * 1.15);
+  --font-size-small: calc(var(--font-size) * 0.85);
+  --font-size-xsmall: calc(var(--font-size) * 0.8);
+
+  --font-family: "Helvetica Neue", Arial, sans-serif;
+  --color-main: #dc3918;
+  --color-divider: #ddd;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-light: #999999;
+  --color-dark: #808080;
+  --color-disabled: #ddd;
+
+  --desktop: 800;
+
+  --avatar-size: 100px;
+  --avatar-size-small: 50px;
+  --avatar-size-xsmall: 40px;
+
+  --padding: 20px;
+  --padding-xlarge: 60px;
+  --padding-large: 40px;
+  --padding-small: 10px;
+  --padding-xsmall: 5px;
+
+  --invisible-mobile: hidden;
+  --display-none-mobile: none;
+
+  @media (min-width: 769px){
+    --font-size: 20px;
+    --font-size-xxxlarge: calc(var(--font-size) * 2.5);
+    --font-size-xxlarge: calc(var(--font-size) * 2);
+    --font-size-xlarge: calc(var(--font-size) * 1.5);
+    --font-size-large: calc(var(--font-size) * 1.25);
+    --font-size-small: calc(var(--font-size) * 0.85);
+    --font-size-xsmall: calc(var(--font-size) * 0.7);
+
+    --avatar-size: 200px;
+    --avatar-size-small: 100px;
+    --avatar-size-xsmall: 50px;
+
+
+    --padding: 40px;
+    --padding-xlarge: 100px;
+    --padding-large: 80px;
+    --padding-small: 20px;
+    --padding-xsmall: 10px;
+    
+    --display-none-mobile: block;
+  }
+}
+
+// Import partials.
+@import
+  "style/base",
+  "style/layout",
+  "style/typography",
+  "style/images",
+  "style/dividers",
+  "style/tables",
+  "style/buttons",
+  "style/dropdowns",
+  "style/tooltips",
+  "style/navs",
+  "style/forms",
+  "style/modal",
+  "style/header",
+  "style/footer",
+  "style/navbar",
+  "style/pagination",
+  "style/rss",
+  "style/author",
+  "style/card",
+  "style/postitem",
+  "style/home",
+  "style/post",
+  "style/about",
+  "style/animate"
+;

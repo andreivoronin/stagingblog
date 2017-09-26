@@ -1,0 +1,34 @@
+---
+layout: default
+---
+<div class="post">
+	
+	{% assign image_files = site.static_files | where: "image", true %}
+	  {% for myimage in image_files %}
+	    {% if myimage.basename == page.permalink %}
+	      <div class="image-cover-wrapper">
+	          <img class="image-cover" src="/assets/posts_images/{{ page.permalink }}.jpg" srcset="/assets/posts_images/{{ page.permalink }}@2x.jpg" alt="">
+	          <img class="image-cover-background" src="/assets/posts_images/{{ page.permalink }}@2x.jpg" srcset="/assets/posts_images/{{ page.permalink }}@2x.jpg" alt="">
+	      </div>
+	    {% else %}
+	    {% endif %}
+	{% endfor %}
+
+	<article class="container">
+		<div class="row">
+			<header class="col post-header">
+				<h1 class="post-title">{{ page.title | escape }}</h1>
+			</header>
+		</div>
+		<div class="row">
+			<div class="col">
+				<div class="post-content">
+					{{ content }}
+				</div>
+			</div>
+		</div>
+	</article>
+
+  {% include author.html %}
+
+</div>

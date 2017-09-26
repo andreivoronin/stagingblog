@@ -1,0 +1,60 @@
+// Footer
+footer {
+  border-top: 1px solid var(--color-black);
+  // border-bottom: 1px solid var(--color-black);
+
+  // Author
+  .author {
+    padding-top: var(--padding-xsmall);
+    padding-bottom: var(--padding-xsmall);
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    
+      &-item {
+        display: flex;
+        align-items: center;
+        margin-top: var(--padding-xsmall);
+        margin-bottom: var(--padding-xsmall);
+
+        > * {
+          margin-right: var(--padding-xsmall);
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    &-avatar {
+      width: var(--avatar-size-xsmall);
+      height: var(--avatar-size-xsmall);
+    }
+    &-name {
+      color: var(--color-black);
+      font-size: var(--font-size-small);
+      line-height: 1.2;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    &-username {
+      font-size: var(--font-size-small);
+      line-height: 1.2;
+    }
+    &-social {
+
+      &-link {
+        margin-right: var(--padding-xsmall);
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    &-follow {
+
+    }
+  }
+}

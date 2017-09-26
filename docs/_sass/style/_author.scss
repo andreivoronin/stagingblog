@@ -1,0 +1,58 @@
+// Author
+.author {
+
+  &-avatar {
+    border-radius: 100%;
+  }
+  &-username {
+    color: var(--color-dark);
+  }
+  &-location {
+    color: var(--color-dark);
+  }
+  &-bio {
+
+    &-info {
+      color: var(--color-black);
+      font-size: var(--font-size);
+      font-weight: normal;
+    }
+    &-learn-more {
+      font-size: var(--font-size-xsmall);
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+  }
+  &-social {
+    display: flex;
+
+    &-link {
+      line-height: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &-stats {
+    display: flex;
+
+    &-number {
+      margin-right: var(--padding-small);
+      
+      &-label {
+        font-size: var(--font-size);
+        font-weight: bold;
+        color: var(--color-dark);
+      }
+      &-value {
+        font-weight: bold;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

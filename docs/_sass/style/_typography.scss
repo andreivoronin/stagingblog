@@ -1,0 +1,108 @@
+// Heading
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 1em;
+  margin-bottom: 0.25em;
+  font-weight: bold;
+  line-height: 1;
+}
+h1 {
+  font-size: var(--font-size-xxxlarge);
+}
+h2 {
+  font-size: var(--font-size-xxlarge);
+}
+h3 {
+  font-size: var(--font-size-xlarge);
+}
+h4 {
+  font-size: var(--font-size-large);
+}
+h5 {
+  font-size: var(--font-size);
+}
+h6 {
+  font-size: var(--font-size-small);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+// Paragraph
+p {
+  margin-bottom: 1em;
+}
+.p-small {
+  font-size: smaller;
+}
+
+// Link
+a {
+  color: var(--color-main);
+  text-decoration: none;
+}
+
+// Bold, italic
+b, strong {
+  font-weight: bold;
+}
+i, em {
+  font-style: italic;
+}
+
+// Blockquote
+blockquote {
+  line-height: 1.375;
+  margin: 64px 0 64px -40px;
+  border-left: 8px solid var(--color-divider);
+  font-style: italic;
+  padding-left: 32px;
+}
+blockquote p {
+  font-size: var(--font-size-xlarge);
+}
+
+// Code
+pre {
+  border-left: 8px solid var(--color-divider);
+  margin: 32px 0;
+  padding-left: 16px;
+  overflow-x: auto;
+}
+code {
+  color: var(--color-main);
+  font-size: smaller;
+  padding: 1px 4px;
+  font-family: monospace;
+}
+del code {
+  text-decoration-line: inherit;
+  text-decoration-color: var(--color-main);
+}
+
+// List
+ul, ol {
+  margin-bottom: 1em;
+  padding-left: 40px;
+}
+li {
+  margin-bottom: 0.5em;
+}
+ul li {
+  list-style-type: disc;
+}
+ul ul li {
+  list-style-type: circle;
+}
+ol li {
+  list-style-type: decimal;
+}
+
+// Description
+dt {
+  font-size: smaller;
+  font-weight: bold;
+  line-height: 1.25;
+}
+dd {
+  font-size: smaller;
+  margin-bottom: 0.5em;
+}

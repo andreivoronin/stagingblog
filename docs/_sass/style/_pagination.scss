@@ -1,0 +1,17 @@
+.pagination {
+	margin-top: var(--padding-small);
+	margin-bottom: var(--padding-xlarge);
+
+	&-previous {
+		background-color: var(--color-black);
+		border-color: var(--color-black);
+	}
+	&-next {
+
+	}
+	&-page-number {
+		display: inline-block;
+		margin-left: var(--padding-small);
+		margin-right: var(--padding-small);
+	}
+}

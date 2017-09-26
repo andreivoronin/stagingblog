@@ -1,0 +1,50 @@
+<address class="address author">
+  <div class="container">
+    <div class="row">
+      <div class="col author-col">
+        <img src="/assets/images/author-avatar@2x.jpg" alt="" class="author-avatar">
+        <div class="author-names">
+          <h1 class="author-name">{{ site.name }}</h1>
+          <div class="author-username">@{{ site.username }}</div>
+        </div>
+        <div class="author-location">{{ site.location }}</div>
+        <a href="/about" class="author-bio">
+          <h2 class="author-bio-info">{{ site.description }}</h2>
+          <p class="author-bio-learn-more">Learn more</p>
+        </a>
+        <div class="author-social">
+          <div class="author-social-link">
+            <a href="https://twitter.com/{{ site.twitter.username }}" target="_blank">
+              <img src="/assets/images/logo-twitter.svg" alt="">
+            </a>
+          </div>
+          <div class="author-social-link">
+            <a href="https://github.com/{{ site.github }}" target="_blank">
+            <img src="/assets/images/logo-github.svg" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="author-stats">
+          <a href="/" class="author-stats-number">
+            <div class="author-stats-number-label">Posts</div>
+            <div class="author-stats-number-value">{{ site.posts | size }}</div>
+          </a>
+          <a href="https://twitter.com/{{ site.twitter.username }}" class="author-stats-number" target="_blank">
+            <div class="author-stats-number-label">Tweets</div>
+            <div class="author-stats-number-value">3855</div>
+          </a>
+          <a href="https://twitter.com/{{ site.twitter.username }}/following" class="author-stats-number" target="_blank">
+            <div class="author-stats-number-label">Following</div>
+            <div class="author-stats-number-value">59</div>
+          </a>
+          <a href="https://twitter.com/{{ site.twitter.username }}/followers" class="author-stats-number" target="_blank">
+            <div class="author-stats-number-label">Followers</div>
+            <div class="author-stats-number-value">232</div>
+          </a>
+        </div>
+        <a href="https://twitter.com/intent/follow/?screen_name={{ site.twitter.username }}" target="_blank" class="btn author-follow">Follow</a>
+        <!-- <p>https://cdn.syndication.twimg.com/widgets/followbutton/info.json?screen_names=ulyanovskui</p> -->
+      </div>
+    </div>
+  </div>
+</address>

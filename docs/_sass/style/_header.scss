@@ -1,0 +1,32 @@
+// Header
+.header {
+  position: absolute;
+  z-index: 1;
+  border-bottom: 2px solid var(--color-black);
+
+  display: flex;
+  align-items: center;
+  height: 60px;
+  left: 0;
+  right: 0;
+  
+  &-wrapper {
+    
+  }
+  .logo {
+    font-weight: bold;
+    white-space: nowrap;
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .nav {
+  display: flex;
+
+    &-item {
+      margin-left: auto;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+img {
+	max-width: 100%;
+}
+
+.image {
+	
+	&-cover {
+	  width: 100%;
+	  max-width: 1707px;
+	  // opacity: 0.5;
+
+	  &-background {
+	    position: absolute;
+	    z-index: -1;
+	    filter: blur(30px);
+	  }
+	  &-wrapper {
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+
+	    overflow-y: hidden;
+	    position: relative;
+	  }
+	}
+}

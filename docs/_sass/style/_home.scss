@@ -1,0 +1,52 @@
+.home {
+
+  .posts {
+
+  }
+
+  // Author
+  .author {
+    padding-top: var(--padding-xlarge);
+    padding-bottom: var(--padding-small);
+    text-align: center;
+    border-bottom: 2px solid var(--color-black);
+
+    &-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-avatar {
+      width: var(--avatar-size);
+      height: var(--avatar-size);
+    }
+    &-name {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    &-bio {
+
+      &-info {
+        max-width: 600px;
+      }
+      &-learn-more {
+        margin-bottom: var(--padding-small);
+      }
+    }
+    &-social {
+      margin-bottom: var(--padding-xsmall);
+
+      &-link {
+        margin-right: var(--padding-small);
+        margin-bottom: var(--padding-xsmall);
+      }
+    }
+    &-stats {
+      margin-bottom: var(--padding-small);
+    }
+  }
+  .content {
+    margin-top: var(--padding);
+    margin-bottom: var(--padding);
+  }
+}

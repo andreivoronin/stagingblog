@@ -1,0 +1,27 @@
+.post-item{
+  list-style-type: none;
+  padding-top: var(--padding-small);
+  padding-bottom: var(--padding-small);
+  margin-bottom: var(--padding-small);
+
+  &-link {
+    color: var(--color-black);
+
+    &:hover .post-title {
+      color: var(--color-main);
+    }
+  }
+  &-date, &-navigation {
+    color: var(--color-main);
+    font-size: smaller;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  &-title {
+    color: var(--color-black);
+    margin-top: 0;
+  }
+  &-excerpt {
+
+  }
+}

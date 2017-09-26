@@ -1,0 +1,15 @@
+.rss {
+	display: inline-block;
+	font-size: var(--font-size-xsmall);
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.04em;
+	float: right;
+	margin-top: var(--padding-small);
+	margin-bottom: var(--padding-small);
+	color: var(--color-light);
+
+	&:hover {
+		color: var(--color-main);
+	}
+}

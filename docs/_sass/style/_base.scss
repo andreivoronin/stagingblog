@@ -1,0 +1,15 @@
+// TODO
+// 1. Mobile
+
+// Base
+html {
+  font-size: var(--font-size);
+}
+body {
+  font-family: var(--font-family);
+  line-height: 1.5;
+}
+
+.invisible-mobile {
+	visibility: var(--invisible);
+}

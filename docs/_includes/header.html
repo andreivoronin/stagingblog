@@ -1,0 +1,27 @@
+<header class="header" role="banner">
+  <div class="container">
+
+    <div class="row">
+
+      {% assign default_paths = site.pages | map: "path" %}
+      {% assign page_paths = site.header_pages | default: default_paths %}
+      <div class="col logo-wrapper">
+        <a class="logo" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+      </div>
+
+<!--       {% if page_paths %}
+      <div class="col">
+        <nav class="nav">
+          <a class="nav-item" href="/about">About</a>
+          <a class="nav-item" href="/contact">Contact</a>
+        </nav>
+      </div>
+      {% endif %} -->
+      <div class="col">
+        <nav class="nav">
+        <a href="https://twitter.com/intent/follow/?screen_name={{ site.twitter.username }}" target="_blank" class="btn btn-small author-follow nav-item">Follow</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>

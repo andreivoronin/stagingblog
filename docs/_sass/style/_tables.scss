@@ -1,0 +1,20 @@
+// Table
+table {
+  display: block;
+  font-size: smaller;
+  margin-bottom: 1.5em;
+  overflow: auto;
+  word-break: keep-all;
+
+  th, td {
+    padding: var(--padding-small) var(--padding) var(--padding-small) 2px;
+    border-top: 1px solid var(--color-black);
+    border-bottom: 1px solid var(--color-black);
+  }
+  th {
+    font-weight: bold;
+    text-align: left;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+  }
+}

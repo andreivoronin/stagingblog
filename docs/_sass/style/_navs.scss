@@ -1,0 +1,26 @@
+// Post previous next
+.post-previous-next {
+
+  .post-item {
+    border-top: 1px solid var(--color-black);
+    width: 50%;
+    
+    &-image {
+      width: 100%;
+    }
+    &-title {
+
+    }
+    &-excerpt {
+      display: var(--display-none-mobile);
+    }
+
+    &:first-child {
+      padding-right: var(--padding-small);
+    }
+    &:last-child {
+      padding-left: var(--padding-small);
+    }
+
+  }
+}
